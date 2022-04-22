@@ -15,6 +15,6 @@ my_fruit_list=pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/
 #streamlit.dataframe(my_fruit_list)
 #let's put a pick list here so that user can pick what they want to pick
 
-fruit_selected=streamlit.multiselect("Pick Some Fruits:", list(my_fruit_list.Fruit),['Avocado','Strawberries'])
-fruit_to_show= my_fruit_list.loc[fruit_selected]
-streamlit.dataframe(fruit_to_show)
+fruits_selected=streamlit.multiselect("Pick Some Fruits:", list(my_fruit_list.Fruit),['Avocado','Strawberries'])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
+streamlit.dataframe(fruits_to_show)
